@@ -64,7 +64,7 @@
    //          };
            combo_ent {
                timeout-ms = <100>;
-               key-positions = <RM1 RM2 RM3>;
+               key-positions = <16 17 18>;
                bindings = <&kp ENT>;
            };
     };
