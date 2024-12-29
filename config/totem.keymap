@@ -75,6 +75,10 @@
         COMBO(ESC, 0 1)
         COMBO(LBKT, 6 7)
         COMBO(RBKT, 7 8)
+        COMBO(LPAR, 16 17)
+        COMBO(RPAR, 17 18)
+        COMBO(LBRC, 26 27)
+        COMBO(RBRC, 27 28)
     };
 
     keymap {
@@ -114,22 +118,22 @@ label= "BASE"                              ;
 label= "NAV"                               ;
 // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 //             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
-//             ┃           ┃           ┃     UP    ┃           ┃     {     ┃   ┃     }     ┃           ┃     UP    ┃           ┃           ┃
+//             ┃           ┃           ┃     UP    ┃           ┃     [     ┃   ┃     ]     ┃           ┃     UP    ┃           ┃           ┃
 //             ┃           ┃           ┃           ┃           ┃           ┃   ┃           ┃           ┃           ┃           ┃           ┃
 //             ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
-//             ┃   SHIFT   ┃   LEFT    ┃    DOWN   ┃   RIGHT   ┃     [     ┃   ┃     ]     ┃  LEFT     ┃   DOWN    ┃  RIGHT    ┃           ┃
+//             ┃   SHIFT   ┃   LEFT    ┃    DOWN   ┃   RIGHT   ┃     (     ┃   ┃     )     ┃  LEFT     ┃   DOWN    ┃  RIGHT    ┃           ┃
 //             ┃           ┃           ┃           ┃           ┃           ┃   ┃           ┃           ┃           ┃           ┃           ┃
 // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
-// ┃           ┃           ┃   P UP    ┃           ┃  P DOWN   ┃     (     ┃   ┃     )     ┃  P UP     ┃           ┃  P DOWN   ┃           ┃           ┃
+// ┃           ┃           ┃   P UP    ┃           ┃  P DOWN   ┃     {     ┃   ┃     }     ┃  P UP     ┃           ┃  P DOWN   ┃           ┃           ┃
 // ┃           ┃           ┃           ┃           ┃           ┃           ┃   ┃           ┃           ┃           ┃           ┃           ┃           ┃
 // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 //                                     ┃           ┃           ┃           ┃   ┃           ┃           ┃           ┃
 //                                     ┃           ┃           ┃           ┃   ┃           ┃           ┃           ┃
 //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
  bindings = <
-                  &none        &none       &kp UP      &none      &kp LBRC       &kp RBRC      &none       &kp UP      &none        ___
-                 &kp LSHFT   &kp LEFT    &kp DOWN    &kp RIGHT    &kp LBKT       &kp RBKT    &kp LEFT    &kp DOWN    &kp RIGHT      ___
-        ___        &none     &kp PG_UP    &none      &kp PG_DN    &kp LPAR       &kp RPAR    &kp PG_UP    &none      &kp PG_DN      ___        ___
+                  &none        &none       &kp UP      &none      &kp LBKT       &kp RBKT      &none       &kp UP      &none        ___
+                 &kp LSHFT   &kp LEFT    &kp DOWN    &kp RIGHT    &kp LPAR       &kp RPAR    &kp LEFT    &kp DOWN    &kp RIGHT      ___
+        ___        &none     &kp PG_UP    &none      &kp PG_DN    &kp LBRC       &kp RBRC    &kp PG_UP    &none      &kp PG_DN      ___        ___
                                            ___         ___          ___            ___         ___         ___
                         >;
                 };
