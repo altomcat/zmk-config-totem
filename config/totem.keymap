@@ -26,12 +26,11 @@
 #define FUN    4
 #define ADJ    5
 
-#define COMBO(NAME, BINDINGS, KEYPOS) \
+#define COMBO(NAME, KEYPOS) \
   combo_##NAME { \
-    timeout-ms = <50>; \
-    bindings = <BINDINGS>; \
-    key-positions = <KEYPOS>; \
-    layers = <0>; \
+        timeout-ms = <50>; \
+        key-positions = <KEYPOS>; \
+        bindings = <&kp NAME>; \
   };
 
 // mod-tap : acts like a modifier when long pressed else tapped
@@ -71,16 +70,14 @@
    +-------+ 32  33  34 ¦ 35  36  37 +-------+     +-------+ LH2 LH1 LH0 ¦ RH0 RH1 RH2 +-------+
            +-------------------------+                     +---------------------------+         */
 
-   combos {
+    combos {
         compatible = "zmk,combos";
-        combo_esc {
-            timeout-ms = <50>;
-            key-positions = <0 1>;
-            bindings = <&kp ESC>;
-        };
+        COMBO(ESC, 0 1)
+        COMBO(LEFT_BRACKET, RT1 RT2)
+        COMBO(RIGHT_BRACKET, RT2 RT3)
     };
 
-   keymap {
+    keymap {
       compatible = "zmk,keymap";
 // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
