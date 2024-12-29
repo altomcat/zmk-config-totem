@@ -68,7 +68,7 @@
         combo_ESC {
             timeout-ms = <50>;
             key-positions = <0 1>;
-            bindings = <&kp ESC)>;
+            bindings = <&kp ESC>;
         };
         combo_LBKT {
             timeout-ms = <50>;
