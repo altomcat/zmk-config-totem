@@ -26,13 +26,6 @@
 #define FUN    4
 #define ADJ    5
 
-#define COMBO(NAME, KEYPOS) \
-  combo_##NAME { \
-        timeout-ms = <50>; \
-        key-positions = <KEYPOS>; \
-        bindings = <&kp NAME>; \
-  };
-
 // mod-tap : acts like a modifier when long pressed else tapped
 &mt {
      quick-tap-ms = <100>;
@@ -72,16 +65,56 @@
 
     combos {
         compatible = "zmk,combos";
-        COMBO(ESC, 0 1)       // QW
-        COMBO(LBKT, 6 7)      // UI
-        COMBO(RBKT, 7 8)      // IO
-        COMBO(LPAR, 16 17)    // JK
-        COMBO(RPAR, 17 18)    // KL
-        COMBO(LBRC, 26 27)    // M,
-        COMBO(RBRC, 27 28)    // ,.
-        COMBO(PIPE, 19 30)    // |
-        COMBO(LC(C)), 23 32)  // copy
-        COMBO(LC(V)), 24 33)  // past
+        combo_ESC {
+            timeout-ms = <50>;
+            key-positions = <0 1>;
+            bindings = <&kp ESC)>;
+        };
+        combo_LBKT {
+            timeout-ms = <50>;
+            key-positions = <6 7>;
+            bindings = <&kp LBKT>;
+        };
+        combo_RBKT {
+            timeout-ms = <50>;
+            key-positions = <7 8>;
+            bindings = <&kp RBKT>;
+        };
+        combo_LPAR {
+            timeout-ms = <50>;
+            key-positions = <16 17>;
+            bindings = <&kp LPAR>;
+        };
+        combo_RPAR {
+            timeout-ms = <50>;
+            key-positions = <17 18>;
+            bindings = <&kp RPAR>;
+        };
+        combo_LBRC {
+            timeout-ms = <50>;
+            key-positions = <26 27>;
+            bindings = <&kp LBRC>;
+        };
+        combo_RPAR {
+            timeout-ms = <50>;
+            key-positions = <27 28>;
+            bindings = <&kp RBRC>;
+        };
+        combo_RPAR {
+            timeout-ms = <50>;
+            key-positions = <19 30>;
+            bindings = <&kp PIPE>;
+        };
+        combo_COPY {
+            timeout-ms = <50>;
+            key-positions = <23 32>;
+            bindings = <&kp LC(C)>;
+        };
+        combo_PASTE {
+            timeout-ms = <50>;
+            key-positions = <24 33>;
+            bindings = <&kp LC(V)>;
+        };
     };
 
     keymap {
@@ -102,14 +135,14 @@ label= "BASE"                              ;
 // ┃    ESC    ┃     Z     ┃     X     ┃     C     ┃     V     ┃     B     ┃   ┃     N     ┃     M     ┃     <     ┃     >     ┃     ?     ┃     '     ┃
 // ┃ CAPS/LOCK ┃           ┃           ┃           ┃           ┃           ┃   ┃           ┃           ┃     ,     ┃     .     ┃     /     ┃    ADJ    ┃
 // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
-//                                     ┃     DEL   ┃    TAB    ┃    SPC    ┃   ┃   ENTER   ┃    BSPC   ┃    - _    ┃
-//                                     ┃  MT LCTR  ┃    NAV    ┃  LSHIFT   ┃   ┃    NUM    ┃    SYM    ┃    FUN    ┃
+//                                     ┃     DEL   ┃    SPC    ┃    TAB    ┃   ┃   ENTER   ┃    BSPC   ┃    - _    ┃
+//                                     ┃  MT LCTR  ┃    NAV    ┃  LSHIFT   ┃   ┃    SYM    ┃    NUM    ┃    FUN    ┃
 //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
  bindings = <
                    &kp Q       &kp W       &kp E       &kp R        &kp T          &kp Y       &kp U       &kp I        &kp O      &kp P
                  &hm LGUI A  &hm LALT S  &hm LCTRL D  &hm LSHIFT F  &kp G          &kp H    &hm RSHFT J &hm RCTRL K  &hm RALT L &hm RGUI SEMICOLON
   &mt CAPS ESCAPE   &kp Z      &kp X       &kp C         &kp V      &kp B          &kp N       &kp M    &kp COMMA     &kp DOT   &kp SLASH   &lt ADJ APOSTROPHE
-                                      &mt LCTRL DEL &lt NAV TAB &mt LSHIFT SPACE  &lt NUM RET &lt SYM BSPC &lt FUN MINUS
+                                      &mt LCTRL DEL &lt NAV SPACE &mt LSHIFT TAB  &lt SYM RET &lt NUM BSPC &lt FUN MINUS
             >;
 
      };
