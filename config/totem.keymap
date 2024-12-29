@@ -73,8 +73,8 @@
 
    combos {
            compatible = "zmk,combos";
-           COMBO(LBKT, &kp LPBKT, RT1 RT2);
-           COMBO(RBKT, &kp LPBKT, RT1 RT2);
+           COMBO(LBKT, &kp LBKT, 6 7);
+           COMBO(RBKT, &kp RBKT, 7 8);
     };
 
    keymap {
