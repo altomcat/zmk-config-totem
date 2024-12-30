@@ -29,7 +29,8 @@
 // mod-tap : acts like a modifier when long pressed else tapped
 &mt {
      quick-tap-ms = <100>;
-     global-quick-tap;
+     require-prior-idle-ms = <125>;
+     // global-quick-tap; // deprecated
      flavor = "tap-preferred";
      tapping-term-ms = <170>;
 };
