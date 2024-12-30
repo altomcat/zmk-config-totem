@@ -18,7 +18,7 @@
 #include <dt-bindings/zmk/outputs.h>
 
 #define ___ &trans
-
+[(}{
 #define BASE   0
 #define NAV    1
 #define SYM    2
@@ -87,49 +87,49 @@
         };
         combo_LBKT {
             timeout-ms = <50>;
-            key-positions = <6 7>;
-            bindings = <&kp LBKT>;
+            key-positions = <6 7>;  // [
+            bindings = < &kp LBKT>;
         };
         combo_RBKT {
             timeout-ms = <50>;
-            key-positions = <7 8>;
+            key-positions = <7 8>;  // ]
             bindings = <&kp RBKT>;
         };
         combo_LPAR {
             timeout-ms = <50>;
-            key-positions = <16 17>;
+            key-positions = <16 17>; // (
             bindings = <&kp LPAR>;
         };
         combo_RPAR {
             timeout-ms = <50>;
-            key-positions = <17 18>;
+            key-positions = <17 18>; // )
             bindings = <&kp RPAR>;
         };
         combo_LBRC {
             timeout-ms = <50>;
-            key-positions = <26 27>;
+            key-positions = <27 28>; // {
             bindings = <&kp LBRC>;
         };
         combo_RBRC {
             timeout-ms = <50>;
-            key-positions = <27 28>;
+            key-positions = <28 29>; // }
             bindings = <&kp RBRC>;
         };
         combo_PIPE {
             timeout-ms = <50>;
-            key-positions = <19 30>;
+            key-positions = <19 30>; // |
             bindings = <&kp PIPE>;
         };
-        combo_COPY {
-            timeout-ms = <50>;
-            key-positions = <23 32>;
-            bindings = <&kp LC(C)>;
-        };
-        combo_PASTE {
-            timeout-ms = <50>;
-            key-positions = <24 33>;
-            bindings = <&kp LC(V)>;
-        };
+        // combo_COPY {
+        //     timeout-ms = <50>;
+        //     key-positions = <24 32>;
+        //     bindings = <&kp LC(C)>;
+        // };
+        // combo_PASTE {
+        //     timeout-ms = <50>;
+        //     key-positions = <25 33>;
+        //     bindings = <&kp LC(V)>;
+        // };
     };
 
     keymap {
