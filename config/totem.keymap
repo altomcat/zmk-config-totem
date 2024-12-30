@@ -18,7 +18,7 @@
 #include <dt-bindings/zmk/outputs.h>
 
 #define ___ &trans
-[(}{
+
 #define BASE   0
 #define NAV    1
 #define SYM    2
