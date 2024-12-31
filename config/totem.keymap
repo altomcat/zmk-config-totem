@@ -58,6 +58,12 @@
           require-prior-idle-ms = <125>;
           bindings = <&kp>, <&kp>;
       };
+      td0: tap_dance_0 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp SQT>, <&kp DQT>;
+        };
    };
 
 /*
@@ -151,7 +157,7 @@ label= "BASE"                              ;
 // ┃ CAPS/LOCK ┃           ┃           ┃           ┃           ┃           ┃   ┃           ┃           ┃     ,     ┃     .     ┃     /     ┃    ADJ    ┃
 // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 //                                     ┃     DEL   ┃    SPC    ┃    TAB    ┃   ┃   ENTER   ┃    BSPC   ┃    - _    ┃
-//                                     ┃  MT LCTR  ┃    NAV    ┃  LSHIFT   ┃   ┃    SYM    ┃    NUM    ┃    FUN    ┃
+//                                     ┃  MT LCTR  ┃    NAV    ┃ MT LSHIFT ┃   ┃    SYM    ┃    NUM    ┃    FUN    ┃
 //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
  bindings = <
                    &kp Q       &kp W       &kp E       &kp R        &kp T          &kp Y       &kp U       &kp I        &kp O      &kp P
@@ -209,7 +215,7 @@ label= "SYM"                               ;
 //                                     ┃           ┃           ┃           ┃   ┃           ┃           ┃           ┃
 //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
  bindings = <
-                &kp EXCL    &kp AT      &kp HASH    &kp DLLR    &kp PRCNT        &kp CARET   &kp AMPS    &kp RA(U)   &kp SQT      &kp DQT
+                &kp EXCL    &kp AT      &kp HASH    &kp DLLR    &kp PRCNT        &kp CARET   &kp AMPS    &kp RA(U)       &td0      &kp DQT
                   ___         ___         ___         ___         ___               ___    &kp LS(RA(N4)) &kp RA(N5) &kp RA(N4) &kp LS(RA(SEMICOLON))
       ___         ___       &kp RA(C)     ___         ___         ___               ___         ___       &kp RA(K)  &kp RA(COMMA)  &kp BSLH    ___
                                           ___         ___         ___               ___         ___         ___
