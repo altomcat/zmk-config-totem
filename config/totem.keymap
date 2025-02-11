@@ -28,11 +28,11 @@
 
 // mod-tap : acts like a modifier when long pressed else tapped
 &mt {
-     quick-tap-ms = <100>;
+     tapping-term-ms = <240>;
+     quick-tap-ms = <200>;
      require-prior-idle-ms = <125>;
      // global-quick-tap; // deprecated
      flavor = "tap-preferred";
-     tapping-term-ms = <170>;
 };
 
 // layer tap : hold to activate layer else tapped
